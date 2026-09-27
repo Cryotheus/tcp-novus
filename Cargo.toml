@@ -1,0 +1,18 @@
+[package]
+name = "tcp-novus"
+version = "1.1.0"
+edition = "2024"
+rust-version = "1.85.1"
+authors = ["Cryotheum", "homonovus"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cryotheus/tcp-novus"
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.7", features = ["derive"] }
+fern = "0.7.1"
+log = "0.4.34"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
